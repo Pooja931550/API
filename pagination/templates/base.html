@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagination</title>
+</head>
+<body>
+    <h1 class="text-center">NUMBER PAGINATION</h1><hr>
+        <div class="container">
+    {% for x in posts %}
+    <div class="mt-5">
+        <h3>Name: {{x.name}}</h3>
+        <h3>Email: {{x.Email}}</h3>
+    </div><hr>
+        
+    {% endfor %}
+    {% include 'pagination.html' with page=post %}
+        </div>
+    
+</body>
+</html>
